@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wWp+tktKg2BBzPuXHGaQA6q8pYOXNb7N4kQZBVh/dTAb73bVLKGbwrpGLHn2yKwp+k2hhrZP3mxXYDkky7MUPg==",
+  "dgSpecHash": "K1Jsy6jmcjklK8mbmZz0Dev6CDDidLgYPAehYm8NuMbrMMPXSFb7ZwW1tfg+a4NDM8O0IkvWSgPiZkGnUyFgaw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\George666\\HotelService\\HotelService.csproj",
+  "projectFilePath": "C:\\Users\\George666\\Desktop\\Project .net\\HotelService\\HotelService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\George666\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\George666\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

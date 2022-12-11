@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\George666\\HotelService\\HotelService.csproj": {}
+    "C:\\Users\\George666\\Desktop\\Project .net\\HotelService\\HotelService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\George666\\HotelService\\HotelService.csproj": {
+    "C:\\Users\\George666\\Desktop\\Project .net\\HotelService\\HotelService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\George666\\HotelService\\HotelService.csproj",
+        "projectUniqueName": "C:\\Users\\George666\\Desktop\\Project .net\\HotelService\\HotelService.csproj",
         "projectName": "HotelService",
-        "projectPath": "C:\\Users\\George666\\HotelService\\HotelService.csproj",
+        "projectPath": "C:\\Users\\George666\\Desktop\\Project .net\\HotelService\\HotelService.csproj",
         "packagesPath": "C:\\Users\\George666\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\George666\\HotelService\\obj\\",
+        "outputPath": "C:\\Users\\George666\\Desktop\\Project .net\\HotelService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
