@@ -1,6 +1,7 @@
 using AutoMapper;
 using HotelService.Dtos;
 using HotelService.Models;
+using HotelService.SyncDataServices.Http;
 using HotelServise.Data;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,11 +13,16 @@ namespace HotelService.Controllers
     {
         private readonly IHotelRepo _repository;
         private readonly IMapper _mapper;
+        private readonly ICommandDataClient _commandDataClient;
 
-        public HotelsController(IHotelRepo repository, IMapper mapper )
+        public HotelsController(
+            IHotelRepo repository, 
+            IMapper mapper,
+            ICommandDataClient commandDataClient )
         {
             _repository = repository;
             _mapper = mapper;
+            _commandDataClient = commandDataClient;
         }
 
         [HttpGet]
@@ -42,13 +48,22 @@ namespace HotelService.Controllers
         }
 
         [HttpPost]
-        public ActionResult<HotelReadDto> CreateHotel(HotelCreateDto hotelCreateDto)
+        public async Task<ActionResult<HotelReadDto>> CreateHotel(HotelCreateDto hotelCreateDto)
         {
             var hotelModel = _mapper.Map<Hotel>(hotelCreateDto);
             _repository.CreateHotel(hotelModel);
             _repository.SaveChanges();
 
             var hotelReadDto = _mapper.Map<HotelReadDto>(hotelModel);
+
+            try
+            {
+                await _commandDataClient.SendHotelToCommand(hotelReadDto);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"--> Could not send synchronously: {ex.Message}");
+            }
 
             return CreatedAtRoute(nameof(GetHotelById), new {Id = hotelReadDto.Id}, hotelReadDto);
         }
